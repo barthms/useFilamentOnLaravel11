@@ -44,6 +44,7 @@ class ProductsResource extends Resource
 
                 Select::make('category_id')  // Menambahkan input kategori
                     ->label('Kategori')
+                    ->searchable()
                     ->options(\App\Models\Categories::all()->pluck('name', 'id'))  // Menampilkan kategori dari model Category
                     ->required(),
 
